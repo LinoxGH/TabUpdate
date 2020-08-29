@@ -1,0 +1,19 @@
+name: TabUpdate
+version: ${project.version}
+main: me.ajan12.tabupdate.TabUpdate
+api-version: 1.14
+depend: [Vault,ProtocolLib]
+authors: [ajan_12]
+description: A Spigot plugin that makes the TAB customizable.
+
+commands:
+  tabupdate:
+    description: The command to force-handle TAB.
+    usage: /tabupdate <player name> OR /tabupdate all
+    permission: tabupdate.use
+    permission-message: "§4You do not have the permission to do this!"
+
+permissions:
+  tabupdate.use:
+    description: The permission node that defines if the player can use /tabupdate command.
+    default: op

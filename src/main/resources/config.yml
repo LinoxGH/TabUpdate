@@ -1,0 +1,58 @@
+# AVAILABLE PLACEHOLDERS:
+#
+# %PLAYER_NAME% : Replaced with the name of the player.
+# %PLAYER_DISPLAY_NAME% : Replaced with the display name of the player.
+# %PLAYER_UUID% : Replaced with the UUID of the player.
+#
+# %PLAYER_PREFIX% : Replaced with the prefix of the player but all colors removed.
+# %PLAYER_PREFIX_COLORED% : Replaced with the prefix of the player with all its colors.
+# %PLAYER_RANK_PREFIX% : Replaced with the prefix of the primary group of the player but all colors removed.
+# %PLAYER_RANK_PREFIX_COLORED% : Replaced with the prefix of the primary group of the player with all its colors.
+#
+# %PLAYER_RANK_SYMBOL% : Replaced with the player's rank's symbol without any color.
+# %PLAYER_RANK_SYMBOL_COLORED% : Replaced with the player's rank's symbol with all its colors.
+#
+# %ALIGN% : Aligns the next word with all the players.
+# NOTE: This can only be used for player names.
+#
+# %PING% : Replaced with the ping of the player in white color.
+# %PING_COLORED% : Replaced with the ping of the player with a color according to their ping status.
+#
+# %WORLD% : Replaced with the player's current world's name.
+# %WORLD_CUSTOM% : Replaced with the text corresponding to the player's current world's name.
+#
+
+#
+# NOTE: tabupdate-cycle defines the amount of seconds to pass between tab updates. Keep this value low if you have ping in a header/footer/playername.
+#
+
+tabupdate-cycle: 5
+
+#
+# NOTE: header-preset and footer-preset are optional, add a # at before "header-preset" or "footer-preset" if you don't want it.
+#
+playername-preset: "%WORLD_CUSTOM% %ALIGN% %PLAYER_RANK_COLORED% %ALIGN% %PLAYER_RANK_SYMBOL_COLORED% %PLAYER_DISPLAY_NAME%"
+header-preset: "&k!!! &4This feature is added by &eTabUpdate Spigot plugin&4!!! &k!!!"
+footer-preset: "&eYour ping is &r%PING_COLORED%"
+
+#
+# NOTE: You need to use Unicode, Java if you want a different/weird symbol. A great website for this: https://r12a.github.io/app-conversion/
+#
+rank-symbols:
+  admin: "&4S"
+  moderator: "&2S"
+  builder: "&bS"
+  member: "aM"
+
+ping-colors:
+  0-bar: "&4&l%PING%"
+  1-bar: "&4%PING%"
+  2-bar: "&c%PING%"
+  3-bar: "&e%PING%"
+  4-bar: "&a%PING%"
+  5-bar: "&2%PING%"
+
+worlds:
+  world: "&eWorld"
+  nether: "&4Nether"
+  the_end: "&dThe End"
